@@ -1,5 +1,5 @@
 ﻿using Microsoft.Azure.ServiceBus;
-using System;
+using Microsoft.Extensions.Configuration;
 using System.Configuration;
 using System.Threading.Tasks;
 
@@ -7,14 +7,18 @@ namespace Wreb.Integration
 {
     public class Commander
     {
+        private static IConfiguration config = null;
         private readonly string queueName;
         private readonly QueueClient queueClient;
         private readonly string serviceBusConnectionString;
 
         public Commander()
         {
-            serviceBusConnectionString = ConfigurationManager.AppSettings.Get("ServiceBusConnectionString");
-            queueName = ConfigurationManager.AppSettings.Get("QueueName");
+            config = new ConfigurationBuilder()
+               .AddJsonFile("appsettings.json")
+               .Build();
+            serviceBusConnectionString = config.GetConnectionString("AzureServicebusConnection");
+            queueName = config.GetSection("QueueName").Value;
             queueClient = new QueueClient(serviceBusConnectionString, queueName);
         }
 

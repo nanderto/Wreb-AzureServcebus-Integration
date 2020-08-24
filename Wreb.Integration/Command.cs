@@ -31,6 +31,8 @@ namespace Wreb.Integration
         /// </summary>
         public string UniqueKey { get; set; }
 
+        public string EndpointId { get; }
+
         /// <summary>
         /// he Client system is the System from which the Command is generated
         /// </summary>

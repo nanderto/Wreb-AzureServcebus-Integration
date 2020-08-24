@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wreb.Integration", "Wreb.Integration\Wreb.Integration.csproj", "{25810D06-976B-4FFC-BFA0-303806D05B16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wreb.Integration", "Wreb.Integration\Wreb.Integration.csproj", "{25810D06-976B-4FFC-BFA0-303806D05B16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wreb.IntegrationTests", "Wreb.IntegrationTests\Wreb.IntegrationTests.csproj", "{A17245FA-462B-49BD-9FE8-CA99D5A09080}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wreb.IntegrationTests", "Wreb.IntegrationTests\Wreb.IntegrationTests.csproj", "{A17245FA-462B-49BD-9FE8-CA99D5A09080}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiveCommands", "ReceiveCommands\ReceiveCommands.csproj", "{F1118BDF-2C63-469A-A93C-4327B3AD7628}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendCommands", "SendCommands\SendCommands.csproj", "{EE322773-673A-4BBB-9C90-552EB041E5A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{A17245FA-462B-49BD-9FE8-CA99D5A09080}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A17245FA-462B-49BD-9FE8-CA99D5A09080}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A17245FA-462B-49BD-9FE8-CA99D5A09080}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1118BDF-2C63-469A-A93C-4327B3AD7628}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1118BDF-2C63-469A-A93C-4327B3AD7628}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1118BDF-2C63-469A-A93C-4327B3AD7628}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1118BDF-2C63-469A-A93C-4327B3AD7628}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE322773-673A-4BBB-9C90-552EB041E5A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE322773-673A-4BBB-9C90-552EB041E5A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE322773-673A-4BBB-9C90-552EB041E5A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE322773-673A-4BBB-9C90-552EB041E5A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

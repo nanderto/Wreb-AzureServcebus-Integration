@@ -9,6 +9,7 @@ namespace Wreb.Integration.Tests
     [TestClass]
     public class BinarySerializerTests
     {
+
         [TestMethod]
         public void SerializeTest()
         {
@@ -25,7 +26,6 @@ namespace Wreb.Integration.Tests
     [Serializable]
     public class TestCommand : Command, ICommand
     {
-
         public TestCommand(string originUser, string originSystem, string commandAction, string connectionId, int? id, string clientId) : 
             base(originUser, originSystem, commandAction, connectionId, id, clientId)
         {
