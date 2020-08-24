@@ -30,9 +30,9 @@ namespace Wreb.Integration
             return 0;
         }
 
-        private Message BinarySerializedAnPackaged(ICommand command)
+        private Message BinarySerializedAnPackaged(ICommand command) 
         {
-            throw new NotImplementedException();
+            return new Message(BinarySerializer.Serialize(command));
         }
     }
 }
