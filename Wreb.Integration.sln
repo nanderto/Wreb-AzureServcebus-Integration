@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiveCommands", "ReceiveC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendCommands", "SendCommands\SendCommands.csproj", "{EE322773-673A-4BBB-9C90-552EB041E5A0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wreb.Servicebus", "Wreb.Servicebus\Wreb.Servicebus.csproj", "{D084F653-8BB0-4E9F-959D-CE91681AB67B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{EE322773-673A-4BBB-9C90-552EB041E5A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE322773-673A-4BBB-9C90-552EB041E5A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE322773-673A-4BBB-9C90-552EB041E5A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D084F653-8BB0-4E9F-959D-CE91681AB67B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D084F653-8BB0-4E9F-959D-CE91681AB67B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D084F653-8BB0-4E9F-959D-CE91681AB67B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D084F653-8BB0-4E9F-959D-CE91681AB67B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

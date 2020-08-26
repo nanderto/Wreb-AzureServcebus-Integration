@@ -9,7 +9,6 @@ namespace ReceiveCommands
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
             receiver = new Receiver();
 
             Console.WriteLine("======================================================");
