@@ -1,6 +1,8 @@
 ﻿using Microsoft.Azure.ServiceBus;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
+using Wreb.Concrete;
 using Wreb.Integration;
 using Wreb.Integration.Tests;
 
@@ -8,18 +10,25 @@ namespace SendCommands
 {
     class Program
     {
+        private static bool UseBinaryFormater = false;
+
         static async Task Main(string[] args)
         {
-            const int numberOfMessages = 10;
+            int result = 10;
+            int numberOfMessages = 10;
+            
+            if ((args.Length > 0) && int.TryParse(args[0], out result))
+            {
+                numberOfMessages = result;
+            }
 
-            Console.WriteLine("======================================================");
-            Console.WriteLine("Press ENTER key to exit after sending all the messages.");
-            Console.WriteLine("======================================================");
+            if ((args.Length > 1) && int.TryParse(args[0], out result))
+            {
+                UseBinaryFormater = true;
+            }
 
             // Send messages.
             await SendMessagesAsync(numberOfMessages);
-
-            Console.ReadKey();
         }
 
         static async Task SendMessagesAsync(int numberOfMessagesToSend)
@@ -32,13 +41,19 @@ namespace SendCommands
                 {
                     // Create a new message to send to the queue.
                     var command = new TestCommand("originUser", "SystemX", typeof(Command).FullName, Guid.NewGuid().ToString(), null, Guid.NewGuid().ToString());
-                    var message = new Message(BinarySerializer.Serialize(command));
 
                     // Write the body of the message to the console.
-                    Console.WriteLine($"Sending message: {command.ToString()}");
+                    Console.WriteLine($"Sending message: {command.ToString()} Guid {command.ClientId}");
 
                     // Send the message to the queue.
-                    await commander.SendAsync(command);
+                    if (UseBinaryFormater)
+                    {
+                        await commander.SendAsync(command);
+                    }
+                    else
+                    {
+                        await commander.SendAsync<ICommand>(command);
+                    }
                 }
             }
             catch (Exception exception)

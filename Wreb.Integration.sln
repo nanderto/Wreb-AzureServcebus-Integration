@@ -7,11 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wreb.Integration", "Wreb.In
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wreb.IntegrationTests", "Wreb.IntegrationTests\Wreb.IntegrationTests.csproj", "{A17245FA-462B-49BD-9FE8-CA99D5A09080}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiveCommands", "ReceiveCommands\ReceiveCommands.csproj", "{F1118BDF-2C63-469A-A93C-4327B3AD7628}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiveCommands", "ReceiveCommands\ReceiveCommands.csproj", "{F1118BDF-2C63-469A-A93C-4327B3AD7628}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendCommands", "SendCommands\SendCommands.csproj", "{EE322773-673A-4BBB-9C90-552EB041E5A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SendCommands", "SendCommands\SendCommands.csproj", "{EE322773-673A-4BBB-9C90-552EB041E5A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wreb.Servicebus", "Wreb.Servicebus\Wreb.Servicebus.csproj", "{D084F653-8BB0-4E9F-959D-CE91681AB67B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wreb.Servicebus", "Wreb.Servicebus\Wreb.Servicebus.csproj", "{D084F653-8BB0-4E9F-959D-CE91681AB67B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wreb.Concrete", "Wreb.Concrete\Wreb.Concrete.csproj", "{3DA9DCE0-845D-438D-B875-4AF93E316F9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wreb.ConcreteTests", "Wreb.ConcreteTests\Wreb.ConcreteTests.csproj", "{EB1CD003-D4AD-431F-8797-0C6A60815A90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{D084F653-8BB0-4E9F-959D-CE91681AB67B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D084F653-8BB0-4E9F-959D-CE91681AB67B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D084F653-8BB0-4E9F-959D-CE91681AB67B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DA9DCE0-845D-438D-B875-4AF93E316F9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DA9DCE0-845D-438D-B875-4AF93E316F9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DA9DCE0-845D-438D-B875-4AF93E316F9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DA9DCE0-845D-438D-B875-4AF93E316F9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB1CD003-D4AD-431F-8797-0C6A60815A90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB1CD003-D4AD-431F-8797-0C6A60815A90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB1CD003-D4AD-431F-8797-0C6A60815A90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB1CD003-D4AD-431F-8797-0C6A60815A90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

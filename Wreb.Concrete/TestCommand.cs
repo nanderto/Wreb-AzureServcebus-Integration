@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Runtime.Serialization;
+using Wreb.Integration;
 
-namespace Wreb.Integration.Tests
+namespace Wreb.Concrete
 {
     [Serializable]
+    [KnownType(typeof(TestCommand))]
     public class TestCommand : Command, ICommand
     {
         public TestCommand(string originUser, string originSystem, string commandAction, string connectionId, int? id, string clientId) : 

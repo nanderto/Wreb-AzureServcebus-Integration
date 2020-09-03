@@ -26,7 +26,7 @@ namespace Wreb.Integration
 
         private Message BinarySerializedAnPackaged(ICommand command)
         {
-            return new Message(BinarySerializer.Serialize(command));
+            return new Message(BinarySerializer.Serialize((Command)command));
         }
 
         static void RegisterOnMessageHandlerAndReceiveMessages()

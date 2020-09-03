@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace Wreb.Integration
 {
     [Serializable]
+    [KnownType(typeof(Command))]
     public abstract class Command : ICommand
     {
 
