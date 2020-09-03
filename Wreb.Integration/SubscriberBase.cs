@@ -11,10 +11,13 @@ namespace Wreb.Integration
 
         public ICommand Command;
 
+        public string CommandTypeSubscribedTo { get; set; }
+
 
         public ISubscriber SubscribeToCommand(Type type)
         {
             this.CommandHandlerService.KnownTypes.Add(type);
+            CommandTypeSubscribedTo = type.FullName;
             return this;
         }
 

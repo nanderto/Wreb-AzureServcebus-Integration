@@ -10,7 +10,9 @@ namespace Wreb.Concrete
     {
         public override void Initialize()
         {
-             subscribers.Add(new ConsoleWriterSubscriber().WithYourCommandHandlerService(this).SubscribeToCommand(typeof(TestCommand)));
+            Add(new ConsoleWriterSubscriber().WithYourCommandHandlerService(this).SubscribeToCommand(typeof(TestCommand)));
+            Add(new ConsoleWriterSubscriber().WithYourCommandHandlerService(this).SubscribeToCommand(typeof(TestCommand2)));
+            Add(new ConsoleWriterSubscriber2().WithYourCommandHandlerService(this).SubscribeToCommand(typeof(TestCommand2)));
         }
     }
 }

@@ -27,17 +27,16 @@ namespace Wreb.Servicebus
         public async Task RunAsync([ServiceBusTrigger("firstqueue", Connection = "AzureServicebusConnection")] Message myQueueItem, ILogger log)
         {
 
-            ICommand deSerializedMessage = BinarySerializer.Deserialize<ICommand>(myQueueItem.Body, this.commandHandlerService.KnownTypes);
+            ICommand command = BinarySerializer.Deserialize<ICommand>(myQueueItem.Body, this.commandHandlerService.KnownTypes);
 
            // Console.WriteLine($"Received message: ClientId:{deSerializedMessage.ClientId} OriginUser:{deSerializedMessage.OriginUser}");
             //Console.WriteLine($"Received message: SequenceNumber:{myQueueItem} Body:{deSerializedMessage.GetType().FullName}");
-           
-            TestCommand command = (TestCommand)deSerializedMessage;
-            Console.WriteLine($"TestCommand: ClientId:{command.ClientId} OriginUser:{command.OriginUser}");
+            
+            //C0onsole.WriteLine($"TestCommand: ClientId:{command.ClientId.ToString()} OriginUser:{command.OriginUser}");
 
             var commandHandler = new CommandHandler();
 
-            this.commandHandlerService.HandleCommandAsync(command);
+            await this.commandHandlerService.HandleCommandAsync(command);
         }
     }
 

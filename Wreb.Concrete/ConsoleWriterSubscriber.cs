@@ -8,17 +8,17 @@ namespace Wreb.Concrete
 {
     public class ConsoleWriterSubscriber : SubscriberBase, ISubscriber
     {
- 
-
-
-        //public ConsoleWriterSubscriber(CommandHandlerService commandHandlerService)
-        //{
-        //    this.CommandHandlerService = commandHandlerService;
-        //}
-
         public override async Task ExecuteAsync(ICommand command)
         {
-            Console.WriteLine($"Executing subscriber ConsoleWriterSubscriber, the UniqueKey of the command is {command.UniqueKey} ");
+            Console.WriteLine($"Executing subscriber ConsoleWriterSubscriber, the ClientId of the command is {command.ClientId} ");
+        }
+    }
+
+    public class ConsoleWriterSubscriber2 : SubscriberBase, ISubscriber
+    {
+        public override async Task ExecuteAsync(ICommand command)
+        {
+            Console.WriteLine($"Executing subscriber ConsoleWriterSubscriber2, the ClientId of the command is {command.ClientId} ");
         }
     }
 }
