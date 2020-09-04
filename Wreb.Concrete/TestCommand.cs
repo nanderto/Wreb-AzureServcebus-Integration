@@ -15,18 +15,6 @@ namespace Wreb.Concrete
         }
 
         public string TestProperty { get; set; }
-
-        public override bool Equals(object obj)
-        {
-            return obj is TestCommand command &&
-                   TestProperty == command.TestProperty &&
-                   base.Equals(command);
-        }
-
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
-        }
     }
 
     [Serializable]
@@ -43,21 +31,10 @@ namespace Wreb.Concrete
             string testProperty) :
             base(originUser, originSystem, commandAction, connectionId, id, clientId)
         {
-            this.TestProperty = testProperty;
+            this.TestProperty2 = testProperty;
         }
 
-        public string TestProperty { get; set; }
+        public string TestProperty2 { get; set; }
 
-        public override bool Equals(object obj)
-        {
-            return obj is TestCommand command &&
-                   TestProperty == command.TestProperty &&
-                   base.Equals(command);
-        }
-
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
-        }
     }
 }

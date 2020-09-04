@@ -8,7 +8,6 @@ namespace Wreb.Integration
     {
         List<Type> KnownTypes { get; set; }
 
-
         Task HandleCommandAsync(ICommand command);
     }
 }

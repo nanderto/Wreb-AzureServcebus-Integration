@@ -29,13 +29,6 @@ namespace Wreb.Servicebus
 
             ICommand command = BinarySerializer.Deserialize<ICommand>(myQueueItem.Body, this.commandHandlerService.KnownTypes);
 
-           // Console.WriteLine($"Received message: ClientId:{deSerializedMessage.ClientId} OriginUser:{deSerializedMessage.OriginUser}");
-            //Console.WriteLine($"Received message: SequenceNumber:{myQueueItem} Body:{deSerializedMessage.GetType().FullName}");
-            
-            //C0onsole.WriteLine($"TestCommand: ClientId:{command.ClientId.ToString()} OriginUser:{command.OriginUser}");
-
-            var commandHandler = new CommandHandler();
-
             await this.commandHandlerService.HandleCommandAsync(command);
         }
     }

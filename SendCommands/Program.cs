@@ -85,7 +85,7 @@ namespace SendCommands
                     var command = new TestCommand2("originUser", "SystemX", typeof(Command).FullName, Guid.NewGuid().ToString(), null, Guid.NewGuid().ToString(), "This is the Test Property 2");
 
                     // Write the body of the message to the console.
-                    Console.WriteLine($"Sending message with ClientId: {command.ClientId} :: {command.TestProperty}");
+                    Console.WriteLine($"Sending message with ClientId: {command.ClientId} :: {command.TestProperty2}");
 
                     // Send the message to the queue.
                     if (UseBinaryFormater)
