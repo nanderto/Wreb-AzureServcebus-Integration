@@ -29,6 +29,7 @@ namespace Wreb.Integration.Tests
         }
 
         [TestMethod]
+        [TestCategory("ServicebusIntegration")]
         public async Task SendAsyncTest()
         {
             var commander = new Commander();
@@ -39,7 +40,7 @@ namespace Wreb.Integration.Tests
                 TestProperty = "XXXX"
             };
 
-            if(await commander.SendAsync(testCommand) > 0)
+            if (await commander.SendAsync(testCommand) > 0)
             {
                 Assert.IsTrue(true);
             }
@@ -50,6 +51,7 @@ namespace Wreb.Integration.Tests
 
 
         [TestMethod]
+        [TestCategory("ServicebusIntegration")]
         public async Task SendAsyncOfTypeTest()
         {
             var commander = new Commander();

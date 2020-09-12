@@ -11,8 +11,6 @@ namespace Wreb.Servicebus
     {
         public override void Configure(IFunctionsHostBuilder builder)
         {
-           // builder.Services.AddHttpClient();
-
             builder.Services.AddSingleton<ICommandHandlerService>((s) => {
                 return new MyCommandHandlerService();
             });

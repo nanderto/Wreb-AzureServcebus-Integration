@@ -338,3 +338,5 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/Wreb.Servicebus/Properties/ServiceDependencies/WrebServicebus - Zip Deploy/secrets1.arm.json
+/Wreb.Servicebus/Properties/serviceDependencies.WrebServicebus - Zip Deploy.json
